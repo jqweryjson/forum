@@ -1,0 +1,168 @@
+@import 'vars';
+@import 'normalize';
+@import 'responsive_grid';
+@import 'common';
+
+#preloader {
+	position: absolute;
+	left:40%;
+	top:30%;
+	z-index: 100500;
+	img {
+		width: 800px;
+		height: 800px;
+	}
+}
+
+.container {
+	width: 1920px;
+}
+
+#header {
+	background-size: cover;
+	padding-top: 50px;
+	text-align: center;
+
+	.head {
+		display: flex;
+		align-items:center;
+		.social-icon ul{
+			display: flex;
+			justify-content:center;
+			text-align: center;
+			li {
+				margin-left: 20px;
+			}
+			img {
+				width: 30px;
+				height: 30px;
+				transition: all 0.1s ease-in;
+			}
+			img:hover {
+			transform: scale(2);
+			}
+		}
+		.lang a {
+			transition: all 0.2s ease-in;
+		}
+		.lang a:hover {
+			color: #000;
+			font-size:44px;
+		}
+	}
+
+	.geo {
+		padding-top: 20px;
+		span {
+			padding-left: 10px;
+		}
+	}
+
+}
+
+.side {
+	position: absolute;
+	top:0;
+	height: 100%;
+	width: 20%;
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+.left {
+	left: 0;
+		&:hover {
+		opacity:1;
+		background: #000;
+		background: linear-gradient(to left, rgba(24,44,77,0.0392156862745098),rgba(0,0,0,0.5764705882352941), #000);
+	}
+}
+.right {
+	right:0;
+		&:hover {
+		opacity:1;
+		background: #000;
+		background: linear-gradient(to right, rgba(24,44,77,0.0392156862745098),rgba(0,0,0,0.5764705882352941), #000);
+	}
+}
+
+#about {
+	flex-grow:1;
+	font-family: 'Roboto', sans-serif;
+		margin-top: 100px;
+
+	h1 {
+		font-weight: $weight-thin;
+		font-size: 48px;
+	}
+}
+
+.form {
+	background-color: #325797;
+	background-color: rgba(24,44,77,0.22745098039215686);
+	padding: 20px;
+	text-align: center;
+	p {
+		font-size: 20px;
+	}
+	input {
+		color:#000;
+		font-size: 14px;
+	}
+	button {
+		padding: 0 20px;
+		border:0;
+		background:#04A5F5;
+		background: linear-gradient(to bottom,#04A5F5,#4198FB);
+		span {
+			font-weight: $weight-medium;
+			font-size: 20px;
+		}
+		&:hover {
+			color:#DA2424;
+		}
+	}
+}
+
+.footer {
+	background:url(../img/footerBack.png) no-repeat center ;
+	background-size: auto;
+	font-family: 'Roboto', arial;
+	padding:20px 0 30px 100px;
+	 img {
+	 	float: left;
+	 	margin-right: 10px;
+	 }
+	span{
+		display: block;
+		font-size: 20px;
+	}
+	.fio {
+		padding-top: 20px;
+		span {
+			padding-top: 5px;
+		}
+		.curator {
+			font-size: 12px;
+		}
+	}
+	.creator {
+	text-align: center;
+	line-height: 150px;
+	background: url(../img/smileLogo.png) no-repeat center;
+		span {
+			float: left;
+			font-size: 14px;
+		}
+	}
+	.contacts ul{
+		font-size:14px;
+		margin-top: 20px;
+		li {
+			float: left;
+			margin-right: 80px;
+		}
+		img {
+			//margin-right: 10px;
+		}
+	}
+}
